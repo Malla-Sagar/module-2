@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content" />
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Trial</title>
+    <style type="text/css">
+        .let{
+            width:12.5%;
+            font-size: 12.5vw;
+            font-family: cursive;
+            float: left;
+        }
+        .glow{
+            color: #fff;
+            text-align: center;
+        }
+        .space{
+            opacity: 0;
+        }
+        .glow1{
+            text-shadow: 2px 2px 5px white;
+            animation-name: invisible;
+        }
+        .secret{
+            font-size: 10vw;
+            opacity: 0.05;
+        }
+        .secret:hover{
+            opacity: 0.6;
+        }
+        @keyframes gradual{
+                0%   {opacity: 0}
+                25%  {opacity: 0.25}
+                50%  {opacity: 0.5}
+                75%  {opacity: 0.75}
+                85%  {opacity: 0.85}
+                100% {opacity: 1}
+        }
+        @keyframes invisible {
+                0%   {opacity: 0}
+                25%  {opacity: 0}
+                50%  {opacity: 0}
+                75%  {opacity: 0}
+                85%  {opacity: 0.75}
+                90%  {opacity: 0.85}
+                95%  {opacity: 0.95}
+                100% {opacity: 1}
+        }
+        @-webkit-keyframes glowR {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                    }
+  
+                to {    
+                    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                    }
+        }
+        @-webkit-keyframes glowG {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008000, 0 0 40px #008000, 0 0 50px #008000, 0 0 60px #008000, 0 0 70px #008000;
+                    }
+  
+                to {    
+                    text-shadow: 0 0 20px #fff, 0 0 30px #00FF7F, 0 0 40px #00FF7F, 0 0 50px #00FF7F, 0 0 60px #00FF7F, 0 0 70px #00FF7F, 0 0 80px #00FF7F;
+                    }
+        }
+        @-webkit-keyframes glowB {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008B8B, 0 0 40px #008B8B, 0 0 50px #008B8B, 0 0 60px #008B8B, 0 0 70px #008B8B;
+                    }
+  
+                to {    
+                    text-shadow: 0 0 20px #fff, 0 0 30px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 60px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF;
+                    }
+        }
+        @-webkit-keyframes glowY {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFF00, 0 0 40px #FFFF00, 0 0 50px #FFFF00, 0 0 60px #FFFF00, 0 0 70px #FFFF00;
+                    }
+  
+                to {    
+                    text-shadow: 0 0 20px #fff, 0 0 30px #EEE8AA, 0 0 40px #EEE8AA, 0 0 50px #EEE8AA, 0 0 60px #EEE8AA, 0 0 70px #EEE8AA, 0 0 80px #EEE8AA;
+                    }
+        }
+        @-webkit-keyframes glowSB {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0000FF, 0 0 40px #0000FF, 0 0 50px #0000FF, 0 0 60px #0000FF, 0 0 70px #0000FF;
+                    }
+  
+                to {    
+                    text-shadow: 0 0 20px #fff, 0 0 30px #00BFFF, 0 0 40px #00BFFF, 0 0 50px #00BFFF, 0 0 60px #00BFFF, 0 0 70px #00BFFF, 0 0 80px #00BFFF;
+                    }
+        }
+        @-webkit-keyframes glowPU {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FF00FF , 0 0 40px #FF00FF, 0 0 50px #FF00FF, 0 0 60px #FF00FF, 0 0 70px #FF00FF;
+                    }
+  
+                to {    
+                    text-shadow: 0 0 20px #fff, 0 0 30px #EE82EE, 0 0 40px #EE82EE, 0 0 50px #EE82EE, 0 0 60px #EE82EE, 0 0 70px #EE82EE, 0 0 80px #EE82EE;
+                    }
+        }
+        @-webkit-keyframes glowP {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FF1493 , 0 0 40px #FF1493, 0 0 50px #FF1493, 0 0 60px #FF1493, 0 0 70px #FF1493;
+                    }
+  
+                to {    
+                    text-shadow: 0 0 20px #fff, 0 0 30px #FFB6C1, 0 0 40px #FFB6C1, 0 0 50px #FFB6C1, 0 0 60px #FFB6C1, 0 0 70px #FFB6C1, 0 0 80px #FFB6C1;
+                    }
+        }
+            #d1{
+                animation-duration: 4.5s;
+                color: blue;
+            }
+            #d2{
+                animation-duration: 6.5s;
+                color: #FF1493;
+            }
+            #d3{
+                animation-duration: 8.5s;
+                color: green;
+            }
+            #d4{
+                animation-duration: 10.5s;
+                color: red;
+            }
+            #d5{
+                animation-duration: 12s;
+                color: black;
+            }
+            #d6{
+                animation-duration: 13s;
+                color: #7CFC00;
+            }
+            #d7{
+                animation-duration: 14s;
+                color: #FFFF00;
+            }
+            #d8{
+                animation-duration: 15s;
+                color: #FF00FF;
+            }
+            #d9{
+                animation-duration: 16s;
+                color: #00BFFF;
+            }
+            #d10{
+                animation-duration: 17s;
+                color:violet;
+            }
+            #d11{
+                animation-duration: 18s;
+                color: black;
+            }
+            #d12{
+                animation-duration: 19s;
+                color: yellow;
+            }
+            #d13{
+                animation-duration: 20s;
+                color: #00BFFF;
+            }
+            #d14{
+                -webkit-animation: glowB 0.5s ease-in-out 19s infinite alternate;
+                -moz-animation: glowB 0.5s ease-in-out 19s infinite alternate;
+                animation:invisible 19s,glowB 0.5s ease-in-out 19s infinite alternate;
+            }
+            #d15{
+                -webkit-animation: glowP 0.5s ease-in-out 19.6s infinite alternate;
+                -moz-animation: glowP 0.5s ease-in-out 19.6s infinite alternate;
+                animation:invisible 19.6s,glowP 0.5s ease-in-out 19.6s infinite alternate;
+            }
+            #d16{
+                -webkit-animation: glowY 0.5s ease-in-out 19.9s infinite alternate;
+                -moz-animation: glowY 0.5s ease-in-out 19.9s infinite alternate;
+                animation:invisible 19.9s,glowY 0.5s ease-in-out 19.9s infinite alternate;
+            }
+            #d17{
+                -webkit-animation: glowSB 0.5s ease-in-out 20.1s infinite alternate;
+                -moz-animation: glowSB 0.5s ease-in-out 20.1s infinite alternate;
+                animation:invisible 20.1s,glowSB 0.5s ease-in-out 20.1s infinite alternate;
+            }
+            #d18{
+                -webkit-animation: glowPU 0.5s ease-in-out 20.3s infinite alternate;
+                -moz-animation: glowPU 0.5s ease-in-out 20.3s infinite alternate;
+                animation:invisible 20.3s,glowPU 0.5s ease-in-out 20.3s infinite alternate;
+            }
+            #d19{
+                -webkit-animation: glowR 0.5s ease-in-out 20.5s infinite alternate;
+                -moz-animation: glowR 0.5s ease-in-out 20.5s infinite alternate;
+                animation:invisible 20.5s,glowR 0.5s ease-in-out 20.5s infinite alternate;
+            }
+            #d20{
+                -webkit-animation: glowB 0.5s ease-in-out 20.7s infinite alternate;
+                -moz-animation: glowB 0.5s ease-in-out 20.7s infinite alternate;
+                animation:invisible 20.7s,glowB 0.5s ease-in-out 20.7s infinite alternate;
+            }
+            #d21{
+                -webkit-animation: glowG 0.5s ease-in-out 20.9s infinite alternate;
+                -moz-animation: glowG 0.5s ease-in-out 20.9s infinite alternate;
+                animation:invisible 20.9s,glowG 0.5s ease-in-out 20.9s infinite alternate;
+            }
+    </style>
+</head>
+<body id="page">
+    <audio autoplay>
+        <source src="inkem.mpeg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+	<ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3>Cup</h3></div></li>
+            <li><span>Image 02</span><div><h3>Cuba</h3></div></li>
+            <li><span>Image 03</span><div><h3>Buba</h3></div></li>
+            <li><span>Image 04</span><div><h3>Bup</h3></div></li>
+            <li><span>Image 05</span><div><h3>Copdu</h3></div></li>
+            <li><span>Image 06</span><div><h3>Chipdu</h3></div></li>
+        </ul>
+        <div class="container">
+            <div class="space let">L</div>
+            <div class="glow1 let" id="d1">H</div>
+            <div class="glow1 let" id="d2">A</div>
+            <div class="glow1 let" id="d3">P</div>
+            <div class="glow1 let" id="d4">P</div>
+            <div class="glow1 let" id="d5">Y</div>
+            <div class="space let">L</div>
+            <div class="space let">L</div>
+            <div class="glow1 let" id="d6">B</div>
+            <div class="glow1 let" id="d7">I</div>
+            <div class="glow1 let" id="d8">R</div>
+            <div class="glow1 let" id="d9">T</div>
+            <div class="glow1 let" id="d10">H</div>
+            <div class="glow1 let" id="d11">D</div>
+            <div class="glow1 let" id="d12">A</div>
+            <div class="glow1 let" id="d13">Y</div>
+            <div class="glow let" id="d14">S</div>
+            <div class="glow let" id="d15">P</div>
+            <div class="glow let" id="d16">A</div>
+            <div class="glow let" id="d17">N</div>
+            <div class="glow let" id="d18">D</div>
+            <div class="glow let" id="d19">A</div>
+            <div class="glow let" id="d20">N</div>
+            <div class="glow let" id="d21">A</div>
+            <div class="secret let">LOVE YOU SO MUCH POTTI</div>
+        </div>
+</body>
+</html>

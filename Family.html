@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>My Family</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<ul class="list-group-scrollable">
+					<li id="person1" class="list-group-item">Ramesh Kumar</li>
+					<li id="person2" class="list-group-item">Aruna</li>
+					<li id="person3" class="list-group-item">Siva</li>
+					<li id="person4" class="list-group-item">Sagar</li>
+					<li id="person5" class="list-group-item">Summary</li>
+				</ul>
+			</div>
+			<div id="screen" class="col-md-9">
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var counter=1;
+		$(".list-group-item").click(function(){
+			$("#screen").html($(this).html());
+			var id=$(this).attr("id");
+			counter=parseInt(id.slice(-1));
+		});
+		$("#person"+counter).click();
+		$("#screen").click(function(event){
+			if(event.offsetX<$(this).width()*0.3)
+			{
+				counter=counter-1;
+			}
+			else
+			{
+				counter=counter+1;
+			}
+			if(counter<1)
+			{
+				counter=1;
+			}
+			if(counter>5)
+			{
+				counter=5;
+			}
+			$("#person"+counter).click();
+		})
+	</script>
+
+</body>
+</html>
